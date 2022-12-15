@@ -29,7 +29,7 @@
       >
       <a
         class="p-1 rounded hover:text-slate-100 hover:bg-sky-800 dark:hover:bg-slate-700"
-        href="https://github.com/bradtraversy/50projects50days"
+        href="https://github.com/umitsurumi/50projects50days-vue"
         >本仓库</a
       >
     </div>
