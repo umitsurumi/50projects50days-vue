@@ -60,6 +60,7 @@
 import { ref } from "vue";
 import { RouterView, RouterLink } from "vue-router";
 import { Home, PaperPlane, Moon, Sun } from "@/components/icons/SvgIcons.vue";
+// 切换暗黑模式
 function setDarkMode() {
   const darkClass = document.documentElement.classList;
   darkClass.contains("dark") ? darkClass.remove("dark") : darkClass.add("dark");

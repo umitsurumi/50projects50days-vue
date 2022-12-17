@@ -82,6 +82,8 @@ ul {
     width: 90%;
     height: 90%;
     flex: 0.5;
+    /* flex布局实现点击展开
+    flex单值语法等同于flex-grow，规定了flex项在flex容器中分配剩余空间的相对比例*/
     &.activeCard {
       flex: 5;
       h3 {
