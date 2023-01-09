@@ -11,6 +11,8 @@ import Bars3 from "./Bars-3.vue";
 import User from "./User.vue";
 import Search from "./Search.vue";
 import Refresh from "./Refresh.vue";
+import Pre from "./Pre.vue";
+import Next from "./Next.vue";
 export {
   Home,
   Envelope,
@@ -22,6 +24,8 @@ export {
   User,
   Search,
   Refresh,
+  Pre,
+  Next,
 };
 </script>
 

@@ -1,5 +1,4 @@
 <template>
-  <h2 class="text-2xl">Expanding Cards</h2>
   <ul class="flex flex-col items-center justify-center sm:flex-row">
     <li
       class="relative h-full m-2 text-white cursor-pointer rounded-3xl bg-cover bg-no-repeat transition-all duration-700"
@@ -7,11 +6,9 @@
       :key="image.url"
       :style="{ background: `url(${image.url}` }"
       :class="{ activeCard: image.isActive }"
-      @click="activeCard(image.num)"
-    >
+      @click="activeCard(image.num)">
       <h3
-        class="absolute left-4 bottom-4 text-lg opacity-0 transition-all delay-500 duration-300"
-      >
+        class="absolute left-4 bottom-4 text-lg opacity-0 transition-all delay-500 duration-300">
         {{ image.name }}
       </h3>
     </li>

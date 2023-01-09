@@ -4,8 +4,7 @@
       class="project-card"
       v-for="project in projects"
       :key="project.title"
-      @click="router.push(`/day${project.day}`)"
-    >
+      @click="router.push(`/day${project.day}`)">
       <div class="project-title">
         <p>{{ project.title }}</p>
       </div>
@@ -17,8 +16,7 @@
 import { useRouter } from "vue-router";
 import { useProjectStore } from "@/stores/projects";
 const router = useRouter();
-const projectStore = useProjectStore();
-const projects = projectStore.projects;
+const projects = useProjectStore().projects;
 </script>
 
 <style lang="scss" scoped>

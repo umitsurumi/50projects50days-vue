@@ -1,5 +1,4 @@
 <template>
-  <h2 class="text-2xl">Hidden Search</h2>
   <div class="flex justify-center items-center w-full h-96 bg-purple-700">
     <div class="flex rounded-lg">
       <input

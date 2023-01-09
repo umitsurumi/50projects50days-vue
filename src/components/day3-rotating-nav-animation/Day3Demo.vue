@@ -1,5 +1,4 @@
 <template>
-  <h2 class="text-2xl">Rotating Navigation</h2>
   <div class="relative overflow-hidden bg-slate-700">
     <!-- 导航栏 -->
     <nav
@@ -20,7 +19,7 @@
           class="flex mb-8 transition-all duration-300"
           :class="{ 'ml-4': isRotate }">
           <Envelope class="mr-2" />
-          <P>CONTACT</P>
+          <p>CONTACT</p>
         </li>
       </ul>
     </nav>
