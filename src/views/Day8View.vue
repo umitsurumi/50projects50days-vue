@@ -1,7 +1,9 @@
 <template>
-  <div>DAY1</div>
+  <Day8Demo />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Day8Demo from "@/components/day8-form-input-wave/Day8Demo.vue";
+</script>
 
 <style scoped></style>
