@@ -11,7 +11,7 @@
   </ul>
 </template>
 
-<script lang="ts" setup>
+<script setup lang="ts">
 import { ref, onMounted, onBeforeUnmount } from "vue";
 const scrollBoxes = Math.floor(
   (document.documentElement.clientHeight * 3) / 800
