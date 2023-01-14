@@ -1,0 +1,53 @@
+<template>
+  <div class="relative w-full h-96">
+    <div
+      class="absolute inset-0 m-auto w-2/3 h-24 border-current rounded"
+      :class="{ border: eventKeyCode.code === '' }">
+      <Refresh
+        class="absolute -top-6 -left-6 cursor-pointer"
+        @click="eventKeyCode.code = ''" />
+      <p
+        class="text-2xl text-center"
+        style="line-height: 96px"
+        v-if="eventKeyCode.code === ''">
+        Press any key to get the keyCode
+      </p>
+      <ul
+        class="flex w-full h-full justify-between"
+        v-else>
+        <li
+          class="w-1/4 h-5/6"
+          v-for="key in Object.keys(eventKeyCode)">
+          <h4 class="-mt-2 mb-2 h-1/5 text-center">event.{{ key }}</h4>
+          <p
+            class="flex justify-center items-center w-full h-full border border-current shadow-lg rounded dark:shadow-slate-400">
+            <span class="text-2xl">{{ eventKeyCode[key] }}</span>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+</template>
+
+<script setup lang="ts">
+import { reactive, onMounted, onBeforeUnmount } from "vue";
+import { Refresh } from "../icons/SvgIcons.vue";
+interface EventKeyCode {
+  [key: string]: string;
+}
+const eventKeyCode: EventKeyCode = reactive({
+  key: "",
+  keyCode: "",
+  code: "",
+});
+function showKeyCode(e: KeyboardEvent) {
+  eventKeyCode.key = e.key;
+  eventKeyCode.keyCode = String(e.keyCode);
+  eventKeyCode.code = e.code;
+}
+
+onMounted(() => window.addEventListener("keyup", showKeyCode));
+onBeforeUnmount(() => window.removeEventListener("keyup", showKeyCode));
+</script>
+
+<style scoped></style>

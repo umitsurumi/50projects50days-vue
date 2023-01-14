@@ -47,7 +47,7 @@
       </div>
     </header>
 
-    <div class="flex items-center">
+    <div class="flex mb-2 items-center">
       <h2 class="text-2xl mr-4">{{ demoName }}</h2>
       <button
         :disabled="path === '/'"
