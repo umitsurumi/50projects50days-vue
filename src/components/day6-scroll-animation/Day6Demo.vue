@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from "vue";
+import { ref, onMounted, onUnmounted } from "vue";
 const scrollBoxes = Math.floor(
   (document.documentElement.clientHeight * 3) / 800
 );
@@ -51,7 +51,7 @@ function throttle(func: Function, wait: number, mustRun: number) {
 onMounted(() =>
   window.addEventListener("scroll", throttle(addScrollBox, 500, 1000))
 );
-onBeforeUnmount(() =>
+onUnmounted(() =>
   window.removeEventListener("scroll", throttle(addScrollBox, 500, 1000))
 );
 </script>

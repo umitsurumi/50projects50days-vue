@@ -1,7 +1,9 @@
 <template>
-  <div>DAY1</div>
+  <Day15Demo />
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import Day15Demo from "@/components/day15-incrementing-counter/Day15Demo.vue";
+</script>
 
 <style scoped></style>

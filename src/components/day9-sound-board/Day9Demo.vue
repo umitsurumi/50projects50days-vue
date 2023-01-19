@@ -1,13 +1,29 @@
 <template>
   <div class="w-full">
-    <button
-      class="fixed h-8 px-2 text bg-slate-500/50 shadow rounded"
-      @click="switchTone === 1 ? switchTone++ : switchTone--">
-      {{ switchTone === 1 ? "平假名" : "片假名" }}
-    </button>
+    <div class="fixed">
+      <p
+        class="p-2 shadow rounded-t-xl cursor-pointer"
+        style="writing-mode: vertical-rl"
+        :class="{ 'bg-slate-400': switchTone === 1 }"
+        @click="switchTone = 1">
+        平假名
+      </p>
+      <p
+        class="p-2 shadow rounded-b-xl cursor-pointer"
+        style="writing-mode: vertical-rl"
+        :class="{ 'bg-slate-400': switchTone === 2 }"
+        @click="switchTone = 2">
+        片假名
+      </p>
+    </div>
+
     <table class="mx-auto w-1/2">
-      <tr v-for="i in 11">
-        <td v-for="item in divideTone(i * 5)">
+      <tr
+        v-for="i in 11"
+        :key="`day9${i}`">
+        <td
+          v-for="item in divideTone(i * 5)"
+          :key="`day9${item[0]}`">
           <div
             class="flex my-2 p-1 w-16 h-16 items-end rounded-lg cursor-pointer hover:shadow-lg dark:shadow-slate-300/60"
             @click="playTone(item[1])">

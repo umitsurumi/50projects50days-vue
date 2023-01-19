@@ -17,7 +17,8 @@
         v-else>
         <li
           class="w-1/4 h-5/6"
-          v-for="key in Object.keys(eventKeyCode)">
+          v-for="key in Object.keys(eventKeyCode)"
+          :key="`day11${key}`">
           <h4 class="-mt-2 mb-2 h-1/5 text-center">event.{{ key }}</h4>
           <p
             class="flex justify-center items-center w-full h-full border border-current shadow-lg rounded dark:shadow-slate-400">
@@ -30,7 +31,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, onMounted, onBeforeUnmount } from "vue";
+import { reactive, onMounted, onUnmounted } from "vue";
 import { Refresh } from "../icons/SvgIcons.vue";
 interface EventKeyCode {
   [key: string]: string;
@@ -47,7 +48,7 @@ function showKeyCode(e: KeyboardEvent) {
 }
 
 onMounted(() => window.addEventListener("keyup", showKeyCode));
-onBeforeUnmount(() => window.removeEventListener("keyup", showKeyCode));
+onUnmounted(() => window.removeEventListener("keyup", showKeyCode));
 </script>
 
 <style scoped></style>

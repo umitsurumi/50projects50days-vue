@@ -5,7 +5,8 @@
       <div
         class="relative mb-8"
         :class="{ day8active: formStatus === `${key}` || formInfo[key] !== '' }"
-        v-for="key in Object.keys(formInfo)">
+        v-for="key in Object.keys(formInfo)"
+        :key="`day8${key}`">
         <input
           :type="`${key}`"
           :id="`day8${key}`"
@@ -20,6 +21,7 @@
           <span
             class="transition-all inline-block"
             v-for="(i, index) in `${key[0].toUpperCase() + key.slice(1)}`"
+            :key="`day8${key + index}`"
             :style="{ 'transition-delay': `${index * 50}ms` }"
             >{{ i }}</span
           >

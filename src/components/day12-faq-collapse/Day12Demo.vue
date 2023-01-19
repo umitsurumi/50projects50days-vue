@@ -9,7 +9,8 @@
         'bg-white shadow-lg dark:bg-black dark:shadow-slate-400/50':
           faq.isShowAnswer,
       }"
-      v-for="faq in faqList">
+      v-for="faq in faqList"
+      :key="`day12${faq.question}`">
       <div class="relative z-10">
         <h4 class="pr-6 text-lg">{{ faq.question }}</h4>
         <p
