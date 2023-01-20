@@ -9,6 +9,7 @@
         v-for="item in navList">
         {{ item }}
       </li>
+      <!-- flex项的order属性调整flex项顺序 -->
       <button
         class="flex-center p-2 cursor-pointer"
         :class="{ '-order-1': !navFlag }"
@@ -32,6 +33,7 @@ const navList = reactive(["Home", "Works", "About", "Contact"]);
 </script>
 
 <style scoped>
+/* 渐变实现背景双色分割 */
 .bg-wrapper {
   background: linear-gradient(
     to bottom,
@@ -41,6 +43,8 @@ const navList = reactive(["Home", "Works", "About", "Contact"]);
     #0284c7 100%
   );
 }
+
+/* active效果，沿着中心Y轴选择 */
 .active {
   opacity: 0;
   transform-origin: center;

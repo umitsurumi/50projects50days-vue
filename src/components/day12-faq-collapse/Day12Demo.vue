@@ -42,6 +42,7 @@
 import { reactive } from "vue";
 import { Down, XMarked, Message } from "../icons/SvgIcons.vue";
 
+// 问题，回答和是否展开
 interface FaqList {
   question: string;
   answer: string;

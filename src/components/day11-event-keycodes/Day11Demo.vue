@@ -36,11 +36,15 @@ import { Refresh } from "../icons/SvgIcons.vue";
 interface EventKeyCode {
   [key: string]: string;
 }
+
+// 存储键盘事件的信息
 const eventKeyCode: EventKeyCode = reactive({
   key: "",
   keyCode: "",
   code: "",
 });
+
+// 处理键盘事件并获取事件属性
 function showKeyCode(e: KeyboardEvent) {
   eventKeyCode.key = e.key;
   eventKeyCode.keyCode = String(e.keyCode);

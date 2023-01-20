@@ -1,6 +1,7 @@
 <template>
   <div class="flex justify-center items-center w-full h-96 bg-purple-700">
     <div class="flex rounded-lg">
+      <!-- 应用过渡效果，切换前后都需要指定width属性 -->
       <input
         type="text"
         placeholder="Search…"

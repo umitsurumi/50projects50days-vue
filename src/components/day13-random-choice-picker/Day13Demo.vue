@@ -16,7 +16,7 @@
         v-if="textareaVal !== ''">
         <li
           class="m-2 px-4 py-2 rounded-full"
-          :class="index === selectedVal ? 'bg-orange-400' : 'bg-black/40'"
+          :class="index === selectedIndex ? 'bg-orange-400' : 'bg-black/40'"
           v-for="(item, index) in textareaArr"
           :key="`day13${index}`">
           {{ item }}
@@ -28,19 +28,27 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted, onUnmounted } from "vue";
-const textareaVal = ref("");
-const selectedVal = ref();
+const textareaVal = ref(""); // 输入框字符串
+const selectedIndex = ref(); // 被选中的序号
+
+// 根据输入框字符串分隔为候选项数组，去除空字符串
 const textareaArr = computed(() =>
   textareaVal.value.split(",").filter((item) => item !== "")
 );
+
+// 按下回车在候选项中随机选中
 function randomChoice(e: KeyboardEvent) {
   if (e.key !== "Enter") return false;
+  // 从候选框字符串中去掉回车和换行的转义字符
   textareaVal.value = textareaVal.value.replace(/[\n\r]/g, "");
+  // counter记录随机次数
   let counter = 0;
+  // 开启计时器，每0.1s生成随机数作为被选中项
   const timer = setInterval(() => {
     const randomNum = Math.floor(Math.random() * textareaArr.value.length);
-    selectedVal.value = randomNum;
+    selectedIndex.value = randomNum;
     counter++;
+    // 随机次数大于30后，清除计时器
     if (counter > 30) {
       clearInterval(timer);
     }

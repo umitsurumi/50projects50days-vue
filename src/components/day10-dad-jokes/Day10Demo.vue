@@ -15,6 +15,8 @@
 <script setup lang="ts">
 import { ref, onMounted } from "vue";
 const dadJoke = ref("Joke Goes Here.");
+
+// 异步函数，获取api的数据更新到dadJoke中
 async function getJoke() {
   const config = {
     headers: {

@@ -18,9 +18,11 @@
     </div>
 
     <table class="mx-auto w-1/2">
+      <!-- 列表渲染，11行 -->
       <tr
         v-for="i in 11"
         :key="`day9${i}`">
+        <!-- 列表渲染，每行的音节 -->
         <td
           v-for="item in divideTone(i * 5)"
           :key="`day9${item[0]}`">
@@ -43,6 +45,8 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue";
+
+// 五十音数组，每个数组元素都是一个数组，对应[罗马字,平假名,平假名]
 const fiftyTone = reactive([
   ["a", "あ", "ア"],
   ["i", "い", "イ"],
@@ -96,10 +100,16 @@ const fiftyTone = reactive([
   ["wo", "を", "ヲ"],
   ["n", "ん", "ン"],
 ]);
+
+// 切换平假名和平假名显示，对应数组下标
 const switchTone = ref(1);
+
+// 每5个音为一行
 function divideTone(n: number) {
   return fiftyTone.slice(n - 5, n);
 }
+
+// id获取音频文件播放
 function playTone(id: string) {
   const audio: HTMLAudioElement | null = document.querySelector(`#${id}`);
   audio?.play();

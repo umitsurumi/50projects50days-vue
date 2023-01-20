@@ -2,6 +2,7 @@
   <div class="py-10 px-4 w-full bg-sky-800 text-white">
     <form class="mx-auto px-10 py-5 max-w-sm bg-sky-900 rounded-xl shadow-md">
       <h3 class="mb-8 text-center text-3xl">Please Login</h3>
+      <!-- formStatus是当前活动窗口，或formInfo中已有输入内容，输入框保持active状态 -->
       <div
         class="relative mb-8"
         :class="{ day8active: formStatus === `${key}` || formInfo[key] !== '' }"
@@ -18,6 +19,7 @@
         <label
           :for="`day8${key}`"
           class="absolute top-4 left-0">
+          <!-- 为每一个字符等差设置过渡延迟实现波浪效果 -->
           <span
             class="transition-all inline-block"
             v-for="(i, index) in `${key[0].toUpperCase() + key.slice(1)}`"
@@ -43,6 +45,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue";
+// formStatus判断当前活动输入框类型，focus和blur时更新
 const formStatus = ref("");
 
 interface FormInfo {
@@ -50,6 +53,8 @@ interface FormInfo {
   password: string;
   [key: string]: string;
 }
+
+// formInfo收集输入信息，用于列表渲染和判断当前项目是否为空
 const formInfo: FormInfo = reactive({
   email: "",
   password: "",

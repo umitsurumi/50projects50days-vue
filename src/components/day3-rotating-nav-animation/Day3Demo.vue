@@ -75,6 +75,7 @@
 </template>
 
 <script setup lang="ts">
+// 导航栏图标
 import {
   XMarked,
   Bars3,
@@ -83,6 +84,8 @@ import {
   Envelope,
 } from "@/components/icons/SvgIcons.vue";
 import { ref } from "vue";
+
+// 是否选择正文展示导航栏
 const isRotate = ref(false);
 </script>
 

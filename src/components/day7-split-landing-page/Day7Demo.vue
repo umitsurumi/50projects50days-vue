@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col w-full h-screen bg-slate-500 sm:flex-row">
+    <!-- 思路：flex容器中flex划分占据页面空间，hover调整flex-basis -->
     <div
       class="relative flex-1 bg-cover bg-right transition-all duration-1000"
       style="background-image: url('./src/assets/images/ps5.jpg')">
