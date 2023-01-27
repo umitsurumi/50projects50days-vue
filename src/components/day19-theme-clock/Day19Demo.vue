@@ -1,16 +1,29 @@
 <template>
-  <div>{{ day19Date }}</div>
   <div class="flex-center flex-col">
-    <div class="relative w-64 h-64 p-1 border-4 border-black rounded-full">
+    <div
+      class="relative w-64 h-64 p-1 text-2xl border-4 border-black rounded-full dark:border-white">
+      <h3 class="absolute top-0 left-1/2 -translate-x-1/2">Ⅻ</h3>
+      <h3 class="absolute bottom-0 left-1/2 -translate-x-1/2">Ⅵ</h3>
+      <h3 class="absolute left-2 top-1/2 -translate-y-1/2">Ⅸ</h3>
+      <h3 class="absolute right-2 top-1/2 -translate-y-1/2">Ⅲ</h3>
       <div
-        class="absolute top-1/2 -translate-x-1/2 left-1/2 w-1 h-14 bg-black"></div>
+        class="absolute top-1/2 left-1/2 w-1 h-14 origin-top bg-slate-500 z-10"
+        :style="{
+          rotate: `${180 + day19Date.hour * 30}deg`,
+        }"></div>
       <div
-        class="absolute top-1/2 -translate-x-1/2 left-1/2 w-1 h-28 bg-black"></div>
+        class="absolute top-1/2 left-1/2 w-1 h-24 origin-top bg-black dark:bg-white"
+        :style="{
+          rotate: `${180 + day19Date.min * 6}deg`,
+        }"></div>
       <div
-        class="absolute top-1/2 -translate-x-1/2 left-1/2 w-1 h-1/2 bg-red-500 origin-top"
-        :style="{ rotate: `90deg` }"></div>
-      <div class="absolute-center w-4 h-4 bg-red-500 rounded-full">
-        <div class="absolute-center w-2 h-2 bg-black rounded-full"></div>
+        class="absolute top-1/2 left-1/2 w-1 h-28 bg-red-500 origin-top"
+        :style="{
+          rotate: `${180 + day19Date.sec * 6}deg`,
+        }"></div>
+      <div class="absolute-center w-4 h-4 bg-red-500 rounded-full z-20">
+        <div
+          class="absolute-center w-2 h-2 bg-black rounded-full dark:bg-white z-30"></div>
       </div>
     </div>
     <h3 class="mt-16 mb-4 text-6xl">
@@ -62,6 +75,7 @@ const day19Date = reactive({
   min: 0,
   sec: 0,
 });
+
 function fmtTime(num: number) {
   return num > 10 ? `${num}` : `0${num}`;
 }
