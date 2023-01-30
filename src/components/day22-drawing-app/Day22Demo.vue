@@ -46,7 +46,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, nextTick } from "vue";
+import { reactive, onMounted, onUnmounted } from "vue";
 import { XMarked } from "../icons/SvgIcons.vue";
 let ctx: CanvasRenderingContext2D | null = null;
 interface canvasObj {
@@ -71,8 +71,6 @@ function drawStart(e: MouseEvent) {
   brush.isDrawing = true;
   brush.x = e.offsetX;
   brush.y = e.offsetY;
-  console.log(`x:${brush.x},y:${brush.y}`);
-  console.log(canvasObj.canvas.width);
 }
 function drawEnd(e: MouseEvent) {
   brush.isDrawing = false;
@@ -84,7 +82,6 @@ function draw(e: MouseEvent) {
   if (brush.isDrawing) {
     const x2 = e.offsetX;
     const y2 = e.offsetY;
-    console.log(`x2:${x2},y2:${y2}`);
     drawCircle(x2, y2);
     drawLine(brush.x, brush.y, x2, y2);
     brush.x = x2;
@@ -109,14 +106,17 @@ function draw(e: MouseEvent) {
     }
   }
 }
-
-nextTick(() => {
-  canvasObj.canvas = document.getElementById("day22canvas");
-  ctx = canvasObj.canvas.getContext("2d");
-  console.log(canvasObj.canvas);
+function updateCanvas() {
   canvasObj.width = canvasObj.canvas.offsetWidth;
   canvasObj.height = canvasObj.canvas.offsetHeight;
+}
+onMounted(() => {
+  canvasObj.canvas = document.getElementById("day22canvas");
+  ctx = canvasObj.canvas.getContext("2d");
+  updateCanvas();
+  window.addEventListener("resize", updateCanvas);
 });
+onUnmounted(() => window.removeEventListener("resize", updateCanvas));
 </script>
 
 <style scoped>

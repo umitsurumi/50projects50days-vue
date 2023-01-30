@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center w-full h-[40vh]">
+  <div class="flex-center w-full">
     <ul
       class="flex-center flex-col md:flex-row"
       @dragstart="getCurrent"
@@ -22,7 +22,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-const colorBoxes = reactive(["red", "yellow", "green", "blue", "purple"]);
+const colorBoxes = reactive(["red", "orange", "green", "blue", "purple"]);
 const currentBox = ref(colorBoxes.length);
 const targetBox = ref(colorBoxes.length);
 
