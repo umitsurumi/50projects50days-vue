@@ -1,22 +1,28 @@
-import { createRouter, createWebHistory } from 'vue-router'
-import HomeView from '../views/HomeView.vue'
+import { useProjectStore } from "@/stores/projects";
+import { createPinia } from "pinia";
+import { createRouter, createWebHistory } from "vue-router";
+import HomeView from "../views/HomeView.vue";
 
+const pinia = createPinia();
+const { projects } = useProjectStore(pinia);
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
-      path: '/',
-      name: 'home',
-      component: HomeView
-    }
-]
-})
+      path: "/",
+      name: "home",
+      component: HomeView,
+    },
+  ],
+});
 
-for(let i = 1;i<=50;i++){
-  router.addRoute(   {
-        path: `/day${i}`,
-        name: `/day${i}`,
-        component: () => import(`../views/Day${i}View.vue`)
-      })
-}
-export default router
+projects.forEach((project) => {
+  const { day, title } = project;
+  router.addRoute({
+    path: `/day${day}`,
+    name: `/day${day}`,
+    component: () => import(`../views/day${day}-${title}/Day${day}Demo.vue`),
+  });
+});
+
+export default router;
