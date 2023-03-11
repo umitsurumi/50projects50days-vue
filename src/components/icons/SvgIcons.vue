@@ -1,5 +1,3 @@
-<template></template>
-
 <script lang="ts">
 import Home from "./Home.vue";
 import Envelope from "./Envelope.vue";
@@ -15,7 +13,7 @@ import Pre from "./Pre.vue";
 import Next from "./Next.vue";
 import Down from "./Down.vue";
 import Message from "./Message.vue";
-
+export default {};
 export {
   Home,
   Envelope,
@@ -33,5 +31,3 @@ export {
   Message,
 };
 </script>
-
-<style scoped></style>
