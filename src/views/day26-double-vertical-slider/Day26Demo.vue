@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-import { Pre, Next } from "@/components/icons/SvgIcons.vue";
+import { Pre, Next } from "@/components/icons/SvgIcons";
 const imageIndex = ref(0);
 const sliderImages = reactive([
   {

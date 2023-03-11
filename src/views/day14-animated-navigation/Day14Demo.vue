@@ -27,7 +27,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-import { XMarked, Bars3 } from "@/components/icons/SvgIcons.vue";
+import { XMarked, Bars3 } from "@/components/icons/SvgIcons";
 const navFlag = ref(true);
 const navList = reactive(["Home", "Works", "About", "Contact"]);
 </script>

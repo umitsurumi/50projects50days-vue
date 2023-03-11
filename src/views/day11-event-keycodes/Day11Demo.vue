@@ -30,7 +30,7 @@
 
 <script setup lang="ts">
 import { reactive, onMounted, onUnmounted } from "vue";
-import { Refresh } from "@/components/icons/SvgIcons.vue";
+import { Refresh } from "@/components/icons/SvgIcons";
 interface EventKeyCode {
   [key: string]: string;
 }

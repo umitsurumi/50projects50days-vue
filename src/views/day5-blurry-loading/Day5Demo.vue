@@ -25,7 +25,7 @@
 </template>
 
 <script setup lang="ts">
-import { Refresh } from "@/components/icons/SvgIcons.vue";
+import { Refresh } from "@/components/icons/SvgIcons";
 import { ref, onMounted } from "vue";
 const loading = ref(0);
 

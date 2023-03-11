@@ -43,7 +43,7 @@
 
 <script setup lang="ts">
 import { reactive, onMounted, onUnmounted } from "vue";
-import { XMarked } from "@/components/icons/SvgIcons.vue";
+import { XMarked } from "@/components/icons/SvgIcons";
 let ctx: CanvasRenderingContext2D | null = null;
 interface canvasObj {
   canvas: any;

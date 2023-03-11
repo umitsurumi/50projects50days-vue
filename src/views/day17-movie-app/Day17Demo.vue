@@ -51,7 +51,7 @@
 
 <script setup lang="ts">
 import { onMounted, ref } from "vue";
-import { Search } from "@/components/icons/SvgIcons.vue";
+import { Search } from "@/components/icons/SvgIcons";
 interface MovieDate {
   id: string;
   title: string;

@@ -32,7 +32,7 @@
 
 <script setup lang="ts">
 import { ref, reactive } from "vue";
-import { Pre, Next } from "@/components/icons/SvgIcons.vue";
+import { Pre, Next } from "@/components/icons/SvgIcons";
 const day18ActiveImage = ref(0);
 const day18ImagesList = reactive([
   "https://bing.com/th?id=OHR.ChineseNewYearEve2023_ZH-CN7188893388_1920x1080.jpg",

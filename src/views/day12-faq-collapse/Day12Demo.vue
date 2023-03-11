@@ -36,7 +36,7 @@
 
 <script setup lang="ts">
 import { reactive } from "vue";
-import { Down, XMarked, Message } from "@/components/icons/SvgIcons.vue";
+import { Down, XMarked, Message } from "@/components/icons/SvgIcons";
 
 // 问题，回答和是否展开
 interface FaqList {

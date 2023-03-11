@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import { Search } from "@/components/icons/SvgIcons.vue";
+import { Search } from "@/components/icons/SvgIcons";
 import { ref } from "vue";
 const isExpanding = ref(false);
 </script>

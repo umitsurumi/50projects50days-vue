@@ -76,7 +76,7 @@ import {
   Sun,
   Pre,
   Next,
-} from "@/components/icons/SvgIcons.vue";
+} from "@/components/icons/SvgIcons";
 import { useProjectStore } from "@/stores/projects";
 
 // 切换暗黑模式

@@ -13,7 +13,7 @@
 
 <script setup lang="ts">
 import { reactive, onMounted } from "vue";
-import { Envelope } from "@/components/icons/SvgIcons.vue";
+import { Envelope } from "@/components/icons/SvgIcons";
 
 // counter的目标数据
 const counterList = reactive([7500, 12000, 6000]);

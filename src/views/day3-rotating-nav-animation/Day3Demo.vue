@@ -82,7 +82,7 @@ import {
   Home,
   User,
   Envelope,
-} from "@/components/icons/SvgIcons.vue";
+} from "@/components/icons/SvgIcons";
 import { ref } from "vue";
 
 // 是否选择正文展示导航栏

@@ -1,4 +1,3 @@
-<script lang="ts">
 import Home from "./Home.vue";
 import Envelope from "./Envelope.vue";
 import PaperPlane from "./PaperPlane.vue";
@@ -13,7 +12,7 @@ import Pre from "./Pre.vue";
 import Next from "./Next.vue";
 import Down from "./Down.vue";
 import Message from "./Message.vue";
-export default {};
+export default this;
 export {
   Home,
   Envelope,
@@ -30,4 +29,3 @@ export {
   Down,
   Message,
 };
-</script>
