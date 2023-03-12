@@ -19,13 +19,9 @@
 
     <table class="mx-auto w-1/2">
       <!-- 列表渲染，11行 -->
-      <tr
-        v-for="i in 11"
-        :key="`day9${i}`">
+      <tr v-for="i in 11" :key="`day9${i}`">
         <!-- 列表渲染，每行的音节 -->
-        <td
-          v-for="item in divideTone(i * 5)"
-          :key="`day9${item[0]}`">
+        <td v-for="item in divideTone(i * 5)" :key="`day9${item[0]}`">
           <div
             class="flex my-2 p-1 w-16 h-16 items-end rounded-lg cursor-pointer hover:shadow-lg dark:shadow-slate-300/60"
             @click="playTone(item[1])">
@@ -35,7 +31,7 @@
             <p class="relative -left-1">{{ item[0] }}</p>
             <audio
               :id="`${item[1]}`"
-              :src="`./src/assets/audio/learn50/${item[0]}.mp3`"></audio>
+              :src="`/audio/learn50/${item[0]}.mp3`"></audio>
           </div>
         </td>
       </tr>

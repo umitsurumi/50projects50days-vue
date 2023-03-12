@@ -12,7 +12,7 @@ import Pre from "./Pre.vue";
 import Next from "./Next.vue";
 import Down from "./Down.vue";
 import Message from "./Message.vue";
-export default this;
+import Heart from "./Heart.vue";
 export {
   Home,
   Envelope,
@@ -28,4 +28,5 @@ export {
   Next,
   Down,
   Message,
+  Heart,
 };

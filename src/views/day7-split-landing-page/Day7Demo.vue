@@ -3,7 +3,7 @@
     <!-- 思路：flex容器中flex划分占据页面空间，hover调整flex-basis -->
     <div
       class="relative flex-1 bg-cover bg-right transition-all duration-1000"
-      style="background-image: url('./src/assets/images/ps5.jpg')">
+      style="background-image: url('images/ps5.jpg')">
       <div
         id="test"
         class="absolute inset-0 flex flex-col justify-center text-center text-white bg-indigo-700/60">
@@ -18,7 +18,7 @@
     </div>
     <div
       class="relative flex-1 bg-cover bg-left transition-all duration-1000"
-      style="background-image: url('./src/assets/images/xsx.jpg')">
+      style="background-image: url('images/xsx.jpg')">
       <div
         class="absolute inset-0 flex flex-col justify-center text-center text-white bg-black/40">
         <h3 class="my-10 text-5xl">Xbox Series X</h3>

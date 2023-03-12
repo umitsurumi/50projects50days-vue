@@ -73,13 +73,10 @@ async function getMovies(url: string) {
   const res = await fetch(url);
   const data = await res.json();
   main.value = data.results;
-  console.log(main);
 }
 function getSearch() {
   if (searchKey.value) {
     getMovies(SEARCH_API + searchKey.value + `&language=${language.value}`);
-    console.log(language.value);
-    console.log(SEARCH_API);
   } else {
     window.location.reload;
   }

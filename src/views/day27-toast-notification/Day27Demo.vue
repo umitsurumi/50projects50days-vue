@@ -33,6 +33,11 @@ function addMsg() {
     color: randomColor(),
   };
   msgArr.push(msg);
+  setInterval(() => {
+    if (msgArr.length !== 0) {
+      msgArr.shift();
+    }
+  }, 3000);
 }
 function randomColor() {
   const str =
@@ -42,11 +47,6 @@ function randomColor() {
     Math.floor(Math.random() * 256).toString(16);
   return str;
 }
-setInterval(() => {
-  if (msgArr.length !== 0) {
-    msgArr.shift();
-  }
-}, 1000);
 </script>
 
 <style scoped></style>
