@@ -13,6 +13,10 @@ import Next from "./Next.vue";
 import Down from "./Down.vue";
 import Message from "./Message.vue";
 import Heart from "./Heart.vue";
+import Paste from "./Paste.vue";
+import Delete from "./Delete.vue";
+import Edited from "./Edited.vue";
+import Add from "./Add.vue";
 export {
   Home,
   Envelope,
@@ -29,4 +33,8 @@ export {
   Down,
   Message,
   Heart,
+  Paste,
+  Delete,
+  Edited,
+  Add,
 };
