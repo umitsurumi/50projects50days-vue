@@ -9,11 +9,7 @@
         :class="{ 'rounded-b-3xl': waterCount === 0 }"
         :style="{ height: (8 - waterCount) * 12.5 + '%' }">
         <p v-show="waterCount !== 8">{{ 2 - 0.25 * waterCount }}L</p>
-        <p
-          class="text-base"
-          v-show="waterCount !== 8">
-          Remained
-        </p>
+        <p class="text-base" v-show="waterCount !== 8">Remained</p>
       </div>
       <!-- 已经喝掉的水 -->
       <div
@@ -34,7 +30,6 @@
             : 'bg-sky-100 text-blue-700'
         "
         v-for="i in 8"
-        :key="`day16${i}`"
         :data-index="`${i}`"
         @click="setWaterCount">
         <p class="break-all">250 ml</p>

@@ -6,8 +6,7 @@
       <div
         class="relative mb-8"
         :class="{ day8active: formStatus === `${key}` || formInfo[key] !== '' }"
-        v-for="key in Object.keys(formInfo)"
-        :key="`day8${key}`">
+        v-for="key in Object.keys(formInfo)">
         <input
           :type="`${key}`"
           :id="`day8${key}`"
@@ -16,14 +15,11 @@
           v-model="formInfo[key]"
           @focus="formStatus = `${key}`"
           @blur="formStatus = ''" />
-        <label
-          :for="`day8${key}`"
-          class="absolute top-4 left-0">
+        <label :for="`day8${key}`" class="absolute top-4 left-0">
           <!-- 为每一个字符等差设置过渡延迟实现波浪效果 -->
           <span
             class="transition-all inline-block"
             v-for="(i, index) in `${key[0].toUpperCase() + key.slice(1)}`"
-            :key="`day8${key + index}`"
             :style="{ 'transition-delay': `${index * 50}ms` }"
             >{{ i }}</span
           >
@@ -33,11 +29,7 @@
         Login
       </button>
       <p>
-        Don't have an account?<a
-          href="#"
-          class="text-blue-400"
-          >Register</a
-        >
+        Don't have an account?<a href="#" class="text-blue-400">Register</a>
       </p>
     </form>
   </div>

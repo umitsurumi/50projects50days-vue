@@ -15,7 +15,7 @@
         draggable="true"
         :data-index="index"
         v-for="(box, index) in colorBoxes"
-        :key="`day21${index}`"></li>
+        :key="box"></li>
     </ul>
   </div>
 </template>

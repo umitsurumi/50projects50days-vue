@@ -11,14 +11,11 @@
         id="day13Textarea"
         class="p-2 w-full h-40"
         v-model="textareaVal"></textarea>
-      <ul
-        class="flex flex-wrap w-full text-white"
-        v-if="textareaVal !== ''">
+      <ul class="flex flex-wrap w-full text-white" v-if="textareaVal !== ''">
         <li
           class="m-2 px-4 py-2 rounded-full"
           :class="index === selectedIndex ? 'bg-orange-400' : 'bg-black/40'"
-          v-for="(item, index) in textareaArr"
-          :key="`day13${index}`">
+          v-for="(item, index) in textareaArr">
           {{ item }}
         </li>
       </ul>

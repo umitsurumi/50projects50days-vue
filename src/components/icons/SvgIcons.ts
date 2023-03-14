@@ -1,4 +1,4 @@
-import Home from "./Home.vue";
+import House from "./House.vue";
 import Envelope from "./Envelope.vue";
 import PaperPlane from "./PaperPlane.vue";
 import Moon from "./Moon.vue";
@@ -17,8 +17,12 @@ import Paste from "./Paste.vue";
 import Delete from "./Delete.vue";
 import Edited from "./Edited.vue";
 import Add from "./Add.vue";
+import Book from "./Book.vue";
+import Users from "./Users.vue";
+import Work from "./Work.vue";
+import HouseFill from "./HouseFill.vue";
 export {
-  Home,
+  House,
   Envelope,
   PaperPlane,
   Moon,
@@ -37,4 +41,8 @@ export {
   Delete,
   Edited,
   Add,
+  Book,
+  Users,
+  Work,
+  HouseFill,
 };

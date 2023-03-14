@@ -6,7 +6,7 @@
       :class="isRotate ? 'delay-500' : '-translate-x-full'">
       <ul class="mx-4 text-white">
         <li class="flex mb-8">
-          <Home class="mr-2" />
+          <House class="mr-2" />
           <p>HOME</p>
         </li>
         <li
@@ -79,7 +79,7 @@
 import {
   XMarked,
   Bars3,
-  Home,
+  House,
   User,
   Envelope,
 } from "@/components/icons/SvgIcons";

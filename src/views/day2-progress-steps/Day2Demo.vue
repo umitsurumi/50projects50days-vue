@@ -8,8 +8,7 @@
       <li
         class="flex justify-center items-center w-10 h-10 rounded-full z-10 bg-slate-50 border-4 border-solid border-slate-300 transition-all duration-500 delay-100 dark:text-black"
         :class="{ 'border-sky-500': step <= currentStep }"
-        v-for="step in steps"
-        :key="`day2${step}`">
+        v-for="step in steps">
         {{ step + 1 }}
       </li>
     </ul>

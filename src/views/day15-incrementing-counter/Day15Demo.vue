@@ -1,10 +1,7 @@
 <template>
   <div
     class="flex-center flex-col w-full text-white bg-purple-500 roboto md:flex-row md:h-96">
-    <div
-      class="my-8 mx-12"
-      v-for="(counter, index) in counterList"
-      :key="`day15${index}`">
+    <div class="my-8 mx-12" v-for="counter in counterList">
       <Envelope class="mx-auto w-12 h-12" />
       <p class="my-4 text-6xl">{{ counter }}</p>
     </div>

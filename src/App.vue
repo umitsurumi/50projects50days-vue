@@ -5,7 +5,7 @@
     <RouterLink
       class="p-1 rounded hover:text-slate-100 hover:bg-sky-800 dark:hover:bg-slate-700"
       to="/">
-      <Home class="w-6 h-6 sm:hidden" /><span class="hidden sm:block"
+      <House class="w-6 h-6 sm:hidden" /><span class="hidden sm:block"
         >回到首页</span
       >
     </RouterLink>
@@ -70,7 +70,7 @@
 import { ref, watch } from "vue";
 import { RouterView, RouterLink, useRouter } from "vue-router";
 import {
-  Home,
+  House,
   PaperPlane,
   Moon,
   Sun,
