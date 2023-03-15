@@ -21,7 +21,7 @@
 </template>
 
 <script setup lang="ts">
-import { reactive, ref } from "vue";
+import { reactive, ref, shallowRef } from "vue";
 import {
   HouseFill as House,
   Work,
@@ -35,10 +35,10 @@ interface NavPage {
   page: string;
 }
 const navIcons = reactive<Array<NavPage>>([
-  { icon: House, name: "Home", page: "/images/house.jpg" },
-  { icon: Work, name: "Work", page: "/images/work.jpg" },
-  { icon: Book, name: "Blog", page: "/images/blog.jpg" },
-  { icon: Users, name: "About Us", page: "images/about.jpg" },
+  { icon: shallowRef(House), name: "Home", page: "/images/house.jpg" },
+  { icon: shallowRef(Work), name: "Work", page: "/images/work.jpg" },
+  { icon: shallowRef(Book), name: "Blog", page: "/images/blog.jpg" },
+  { icon: shallowRef(Users), name: "About Us", page: "images/about.jpg" },
 ]);
 </script>
 

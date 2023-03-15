@@ -15,15 +15,23 @@
     <div class="flex m-auto justify-between w-1/2">
       <!-- 上一步，点击当前进度大于0则减1，当前进度等于0不可点击 -->
       <button
-        class="py-1 px-4 rounded bg-sky-500 text-slate-100 cursor-pointer active:scale-90 focus:outline-none"
-        :class="{ 'bg-slate-300 cursor-not-allowed': currentStep === 0 }"
+        class="py-1 px-4 rounded text-slate-100 active:scale-90 focus:outline-none"
+        :class="
+          currentStep === 0
+            ? 'bg-slate-300 cursor-not-allowed'
+            : 'bg-sky-500 cursor-pointer  '
+        "
         @click="currentStep > 0 ? currentStep-- : ''">
         上一步
       </button>
       <!-- 下一步，点击当前进度小于4则加1，当前进度等于4不可点击 -->
       <button
-        class="py-1 px-4 rounded bg-sky-500 text-slate-100 cursor-pointer active:scale-90 focus:outline-none"
-        :class="{ 'bg-slate-300 cursor-not-allowed': currentStep === 4 }"
+        class="py-1 px-4 rounded text-slate-100 active:scale-90 focus:outline-none"
+        :class="
+          currentStep === 4
+            ? 'bg-slate-300 cursor-not-allowed'
+            : 'bg-sky-500 cursor-pointer  '
+        "
         @click="currentStep < 4 ? currentStep++ : ''">
         下一步
       </button>
