@@ -9,7 +9,7 @@
     <div
       class="relative w-full shadow-xl border-8 cursor-pointer dark:shadow-white"
       @dblclick.prevent="likedAnimation">
-      <img class="w-full" ref="img" src="images/liked.jpg" />
+      <img class="w-full" ref="img" src="/images/liked.jpg" />
       <Transition name="heart">
         <Heart
           class="absolute text-red-500 fill-red-500"
