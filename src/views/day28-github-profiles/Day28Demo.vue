@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col items-center">
+  <div class="flex flex-col items-center my-10">
     <div class="w-full h-20 md:w-2/3">
       <input
         class="w-full h-full outline-none p-8 text-2xl bg-purple-500/30 shadow-lg rounded-2xl"

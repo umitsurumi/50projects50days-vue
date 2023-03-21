@@ -1,8 +1,8 @@
 <template>
-  <div class="w-full p-4 bg-indigo-600">
+  <div class="flex-center w-full h-screen p-4 bg-indigo-600">
     <div class="mx-auto w-full text-center bg-white rounded md:w-1/2">
       <h3 class="pt-4 text-slate-400">Don't Laugh Challenge</h3>
-      <p class="my-12 px-4 text-2xl">{{ dadJoke }}</p>
+      <p class="my-12 px-4 text-2xl text-black">{{ dadJoke }}</p>
       <button
         class="mb-4 p-2 text-sm text-white bg-violet-500 rounded-md shadow-2xl"
         @click="getJoke">

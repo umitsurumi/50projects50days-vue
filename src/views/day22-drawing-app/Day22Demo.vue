@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full bg-white border border-black">
+  <div class="w-full">
     <div
       class="flex items-center justify-between w-full h-10 text-black bg-blue-900">
       <div class="flex items-center">
@@ -31,7 +31,7 @@
       </div>
     </div>
     <canvas
-      class="w-full h-[50vh] min-h-[300px] cursor-cell"
+      class="w-full h-[calc(100vh-200px)] min-h-[300px] cursor-cell border border-black"
       id="day22canvas"
       :width="canvasObj.width"
       :height="canvasObj.height"

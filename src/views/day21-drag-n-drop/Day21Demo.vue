@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center w-full">
+  <div class="flex-center w-full py-10">
     <ul
       class="flex-center flex-col md:flex-row"
       @dragstart="getCurrent"

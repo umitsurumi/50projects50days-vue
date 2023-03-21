@@ -1,6 +1,6 @@
 <template>
-  <div class="py-10 px-4 w-full bg-sky-800 text-white">
-    <form class="mx-auto px-10 py-5 max-w-sm bg-sky-900 rounded-xl shadow-md">
+  <div class="flex-center p-10 px-4 w-full h-screen bg-sky-800 text-white">
+    <form class="px-10 py-5 w-96 bg-sky-900 rounded-xl shadow-md">
       <h3 class="mb-8 text-center text-3xl">Please Login</h3>
       <!-- formStatus是当前活动窗口，或formInfo中已有输入内容，输入框保持active状态 -->
       <div

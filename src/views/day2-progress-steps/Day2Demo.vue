@@ -1,10 +1,10 @@
 <template>
-  <div class="w-full sm:w-1/2 m-auto h-96">
+  <div class="w-full p-10 sm:w-1/2 m-auto h-screen">
     <ul class="relative flex h-1/2 items-center justify-between">
       <!-- 显示百分比进度条 -->
-      <div
+      <li
         class="absolute h-1 bg-sky-500 top-1/2 -translate-y-1/2 transition-all duration-300 z-10"
-        :style="{ width: `${(currentStep / 4) * 100}%` }"></div>
+        :style="{ width: `${(currentStep / 4) * 100}%` }"></li>
       <li
         class="flex justify-center items-center w-10 h-10 rounded-full z-10 bg-slate-50 border-4 border-solid border-slate-300 transition-all duration-500 delay-100 dark:text-black"
         :class="{ 'border-sky-500': step <= currentStep }"

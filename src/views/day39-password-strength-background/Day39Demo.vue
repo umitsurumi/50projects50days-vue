@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-[600px] overflow-hidden">
+  <div class="relative w-full h-screen overflow-hidden">
     <img
       class="w-full h-full object-cover"
       :style="{ filter: `blur(${20 - password.length * 2}px)` }"

@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center w-full h-[40vh] bg-slate-600">
+  <div class="flex-center w-full h-screen bg-slate-600">
     <div class="relative w-20 h-20">
       <div
         class="rotateTriangle animationA"

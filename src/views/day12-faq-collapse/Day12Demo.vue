@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full">
+  <div class="w-full p-4">
     <h3 class="text-center text-3xl font-semibold">
       Frequently Asked Questions
     </h3>

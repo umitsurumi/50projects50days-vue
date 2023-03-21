@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full">
-    <div class="fixed">
+  <div class="w-full py-4">
+    <div class="fixed left-2">
       <p
         class="p-2 shadow rounded-t-xl cursor-pointer"
         style="writing-mode: vertical-rl"

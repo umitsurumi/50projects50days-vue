@@ -1,6 +1,6 @@
 <template>
   <div
-    class="flex-center flex-col w-full text-white bg-purple-500 roboto md:flex-row md:h-96">
+    class="flex-center flex-col w-full h-screen text-white bg-purple-500 roboto md:flex-row">
     <div class="my-8 mx-12" v-for="counter in counterList">
       <Envelope class="mx-auto w-12 h-12" />
       <p class="my-4 text-6xl">{{ counter }}</p>

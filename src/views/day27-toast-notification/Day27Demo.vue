@@ -1,6 +1,6 @@
 <template>
   <div
-    class="relative flex-center w-full h-[50vh] bg-purple-600 overflow-hidden">
+    class="relative flex-center w-full h-screen bg-purple-600 overflow-hidden">
     <button
       class="w-24 h-12 text-purple-600 bg-white shadow rounded-lg"
       @click="addMsg">

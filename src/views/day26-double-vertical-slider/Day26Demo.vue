@@ -1,6 +1,5 @@
 <template>
-  <div
-    class="relative flex flex-col w-full h-screen bg-slate-600 md:flex-row md:h-[50vh]">
+  <div class="relative flex flex-col w-full h-screen bg-slate-600 md:flex-row">
     <div class="h-1/3 w-full md:w-1/3 md:h-full overflow-hidden">
       <div
         class="flex-center w-full h-full transform-gpu transition-all duration-500"

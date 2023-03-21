@@ -1,6 +1,6 @@
 <template>
-  <div class="flex justify-center item-center w-full py-10 bg-blue-500">
-    <div class="w-2/3">
+  <div class="flex-center w-full h-screen py-10 bg-blue-500">
+    <div class="w-80 sm:w-[600px]">
       <h3 class="my-2 text-slate-50 text-center text-xl">
         输入候选项并使用符号<em class="text-red-500 font-bold">,</em
         >分隔。<br />
@@ -9,7 +9,7 @@
       <textarea
         placeholder="输入候选项"
         id="day13Textarea"
-        class="p-2 w-full h-40"
+        class="p-2 w-full h-60"
         v-model="textareaVal"></textarea>
       <ul class="flex flex-wrap w-full text-white" v-if="textareaVal !== ''">
         <li

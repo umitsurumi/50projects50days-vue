@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h3 class="mb-10 text-8xl text-center">todos</h3>
+    <h3 class="my-10 text-8xl text-center">todos</h3>
     <div class="mx-auto w-96 max-w-full shadow-lg dark:shadow-current">
       <input
         class="px-8 py-4 w-full h-16 text-2xl bg-yellow-200/60 outline-purple-500 placeholder:text-current placeholder:opacity-30 dark:outline-purple-200"

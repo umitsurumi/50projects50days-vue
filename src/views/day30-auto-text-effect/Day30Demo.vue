@@ -1,5 +1,5 @@
 <template>
-  <div class="relative flex-center w-full h-96 bg-orange-500/80">
+  <div class="relative flex-center w-full h-screen bg-orange-500/80">
     <h3 class="text-4xl font-bold">{{ day30msg }}</h3>
     <div class="absolute flex bottom-4 p-4 bg-black/30">
       <p class="mr-4">Speed:</p>

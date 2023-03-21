@@ -1,5 +1,5 @@
 <template>
-  <div class="m-auto w-80">
+  <div class="m-auto w-80 my-10">
     <h3 class="flex justify-center font-serif font-bold">
       Double click on the image to<Heart class="text-red-500 fill-red-500" /> it
     </h3>

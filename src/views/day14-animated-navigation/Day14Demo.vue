@@ -1,7 +1,7 @@
 <template>
-  <div class="relative w-full h-96 bg-wrapper">
+  <div class="relative w-full h-screen bg-wrapper">
     <ul
-      class="flex absolute-center p-2 bg-white shadow rounded-lg transition-all duration-500"
+      class="flex absolute-center p-2 text-black bg-white shadow rounded-lg transition-all duration-500"
       :class="navFlag ? 'w-80' : 'w-14'">
       <li
         class="p-2 transition-all duration-1000"

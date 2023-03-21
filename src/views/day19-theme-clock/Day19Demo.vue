@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center flex-col">
+  <div class="flex-center flex-col h-screen">
     <div
       class="relative w-64 h-64 p-1 text-2xl border-4 border-black rounded-full dark:border-white">
       <h3 class="absolute top-0 left-1/2 -translate-x-1/2">Ⅻ</h3>

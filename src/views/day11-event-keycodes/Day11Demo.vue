@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-96">
+  <div class="relative w-full h-screen">
     <div
       class="absolute inset-0 m-auto w-2/3 h-24 border-current rounded"
       :class="{ border: eventKeyCode.code === '' }">
