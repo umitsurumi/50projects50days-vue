@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-10 sm:w-1/2 m-auto h-screen">
+  <div class="w-full p-10 sm:w-1/2 m-auto h-[90vh]">
     <ul class="relative flex h-1/2 items-center justify-between">
       <!-- 显示百分比进度条 -->
       <li

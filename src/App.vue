@@ -3,7 +3,7 @@
     <Nav v-show="isShowNav" :title="demoName" />
   </Transition>
   <main class="w-full">
-    <RouterView />
+    <RouterView :isShowNav="isShowNav" />
   </main>
   <NavTool :index="index" :isShowNav="isShowNav" :changeNav="changeNav" />
 </template>

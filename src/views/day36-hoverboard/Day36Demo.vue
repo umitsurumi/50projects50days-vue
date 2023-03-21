@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center my-10">
+  <div class="flex-center my-20">
     <div
       class="flex justify-center flex-wrap m-auto w-[400px]"
       @mouseover="changeColor($event)"

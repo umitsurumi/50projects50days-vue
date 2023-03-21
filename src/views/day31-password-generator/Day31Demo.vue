@@ -11,22 +11,24 @@
           type="text"
           maxlength="20"
           v-model="password" />
-        <Paste
+        <div
           class="absolute right-1 top-1/2 -translate-y-1/2 w-10 h-10 p-2 bg-indigo-700 cursor-pointer"
-          @click="copyPassword" />
+          @click="copyPassword">
+          <Paste />
+        </div>
       </div>
       <ul>
         <li
           class="flex justify-between my-4 font-mono"
-          v-for="(item, key) in day31password"
-          :key="`day31${key}`">
+          v-for="(item, key) in randomPassword"
+          :key="key">
           <h4>{{ item.name }}</h4>
           <input
             class="text-black"
             v-bind="
               typeof item.value === 'number' ? numberAttrs : checkboxAttrs
             "
-            v-model="day31password[key].value" />
+            v-model="randomPassword[key].value" />
         </li>
       </ul>
       <button class="w-full h-12 bg-indigo-700" @click="generatePassword">
@@ -45,7 +47,7 @@ interface PasswordSetting {
   value: number | boolean;
   func?: Function;
 }
-const day31password = reactive<{ [key: string]: PasswordSetting }>({
+const randomPassword = reactive<{ [key: string]: PasswordSetting }>({
   len: { name: "Password Length", value: 4 },
   uppercase: {
     name: "Include uppercase letters",
@@ -85,23 +87,23 @@ const checkboxAttrs = {
 };
 
 function generatePassword() {
-  const len = day31password.len.value;
+  const len = randomPassword.len.value;
   const arr: string[] = [];
 
   let types = ["uppercase", "lowercase", "number", "symbol"];
-  types = types.filter((type) => day31password[type].value);
+  types = types.filter((type) => randomPassword[type].value);
   if (types.length === 0) {
     password.value = "";
   } else {
     types.forEach((type) => {
-      const item = day31password[type];
+      const item = randomPassword[type];
       if (item.func) {
         arr.push(item.func());
       }
     });
     while (arr.length < len) {
       const randomIndex = Math.floor(Math.random() * types.length);
-      const item = day31password[types[randomIndex]];
+      const item = randomPassword[types[randomIndex]];
       if (item.func) {
         arr.push(item.func());
       }

@@ -1,7 +1,7 @@
 <template>
   <div class="flex justify-center flex-wrap">
     <img
-      class="m-5 w-80 h-80 object-cover"
+      class="m-10 w-80 h-80 object-cover"
       :src="image"
       alt=""
       v-for="image in images" />

@@ -8,7 +8,7 @@
       </h3>
       <textarea
         placeholder="输入候选项"
-        id="day13Textarea"
+        id="textarea"
         class="p-2 w-full h-60"
         v-model="textareaVal"></textarea>
       <ul class="flex flex-wrap w-full text-white" v-if="textareaVal !== ''">

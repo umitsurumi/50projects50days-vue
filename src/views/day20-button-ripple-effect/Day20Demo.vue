@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center h-[40vh]">
+  <div class="flex-center h-[90vh]">
     <button
       class="relative w-32 h-16 overflow-hidden text-lg text-slate-100 bg-purple-700 rounded-lg shadow-md"
       @click="rippleEffect">

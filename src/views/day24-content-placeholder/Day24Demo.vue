@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center my-10">
+  <div class="flex-center h-[80vh]">
     <div class="w-80 h-96 bg-white rounded-lg shadow-xl overflow-hidden">
       <div class="relative w-full h-48 bg-red-400">
         <div class="animate-bg" v-show="isLoading"></div>

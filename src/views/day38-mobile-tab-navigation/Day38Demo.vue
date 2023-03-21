@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center bg-purple-400">
+  <div class="flex-center h-screen bg-purple-400">
     <div
       class="relative my-10 w-[340px] h-[600px] border-4 border-white bg-white rounded-2xl overflow-hidden">
       <div

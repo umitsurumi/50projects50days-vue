@@ -1,5 +1,5 @@
 <template>
-  <div class="py-6 w-full bg-blue-400/80 text-white text-center">
+  <div class="py-10 w-full h-screen bg-blue-400/80 text-white text-center">
     <h3 class="mb-6 text-3xl">Goal: 2 Liters</h3>
     <div
       class="flex flex-col mx-auto w-40 h-96 text-2xl border-4 border-blue-700 rounded-b-3xl">

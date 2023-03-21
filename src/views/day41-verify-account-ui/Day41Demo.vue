@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center w-full h-96">
+  <div class="flex-center w-full h-[90vh]">
     <div
       class="p-5 border-4 border-black rounded-lg text-center dark:border-white">
       <h3 class="font-bold text-2xl font-serif">Verify Your Account</h3>

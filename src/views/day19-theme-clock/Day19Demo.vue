@@ -1,5 +1,5 @@
 <template>
-  <div class="flex-center flex-col h-screen">
+  <div class="flex-center flex-col h-[90vh]">
     <div
       class="relative w-64 h-64 p-1 text-2xl border-4 border-black rounded-full dark:border-white">
       <h3 class="absolute top-0 left-1/2 -translate-x-1/2">Ⅻ</h3>
@@ -9,17 +9,17 @@
       <div
         class="absolute top-1/2 left-1/2 w-1 h-14 origin-top bg-slate-500 z-10"
         :style="{
-          rotate: `${180 + day19Date.hour * 30}deg`,
+          rotate: `${180 + date.hour * 30}deg`,
         }"></div>
       <div
         class="absolute top-1/2 left-1/2 w-1 h-24 origin-top bg-black dark:bg-white"
         :style="{
-          rotate: `${180 + day19Date.min * 6}deg`,
+          rotate: `${180 + date.min * 6}deg`,
         }"></div>
       <div
         class="absolute top-1/2 left-1/2 w-1 h-28 bg-red-500 origin-top"
         :style="{
-          rotate: `${180 + day19Date.sec * 6}deg`,
+          rotate: `${180 + date.sec * 6}deg`,
         }"></div>
       <div class="absolute-center w-4 h-4 bg-red-500 rounded-full z-20">
         <div
@@ -27,15 +27,16 @@
       </div>
     </div>
     <h3 class="mt-16 mb-4 text-6xl">
-      {{
-        fmtTime(day19Date.hour > 12 ? day19Date.hour - 12 : day19Date.hour)
-      }}:{{ fmtTime(day19Date.min) }} {{ day19Date.hour > 12 ? "PM" : "AM" }}
+      {{ fmtTime(date.hour > 12 ? date.hour - 12 : date.hour) }}:{{
+        fmtTime(date.min)
+      }}
+      {{ date.hour > 12 ? "PM" : "AM" }}
     </h3>
     <h4 class="text-sm">
-      {{ `${day19Date.day},${day19Date.mon}` }}
+      {{ `${date.day},${date.mon}` }}
       <div
         class="inline-block w-6 h-6 leading-6 text-center text-white bg-black rounded-full dark:text-black dark:bg-white">
-        {{ day19Date.date }}
+        {{ date.date }}
       </div>
     </h4>
   </div>
@@ -66,7 +67,7 @@ const months = [
   "Nov",
   "Dec",
 ];
-const day19Date = reactive({
+const date = reactive({
   timer: 0,
   mon: "",
   date: "",
@@ -81,22 +82,22 @@ function fmtTime(num: number) {
 }
 function setDate() {
   const now = new Date();
-  day19Date.mon = months[now.getMonth()];
-  day19Date.date =
+  date.mon = months[now.getMonth()];
+  date.date =
     now.getDate() > 10
       ? now.getDate().toString()
       : 0 + now.getDate().toString();
-  day19Date.day = days[now.getDay()];
-  day19Date.hour = now.getHours();
-  day19Date.min = now.getMinutes();
-  day19Date.sec = now.getSeconds();
+  date.day = days[now.getDay()];
+  date.hour = now.getHours();
+  date.min = now.getMinutes();
+  date.sec = now.getSeconds();
 }
 
 onMounted(() => {
   setDate();
-  day19Date.timer = setInterval(() => setDate(), 1000);
+  date.timer = setInterval(() => setDate(), 1000);
 });
-onUnmounted(() => clearInterval(day19Date.timer));
+onUnmounted(() => clearInterval(date.timer));
 </script>
 
 <style scoped></style>

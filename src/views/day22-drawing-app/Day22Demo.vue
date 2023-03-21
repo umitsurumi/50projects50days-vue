@@ -32,7 +32,7 @@
     </div>
     <canvas
       class="w-full h-[calc(100vh-200px)] min-h-[300px] cursor-cell border border-black"
-      id="day22canvas"
+      id="canvas"
       :width="canvasObj.width"
       :height="canvasObj.height"
       @mousedown="drawStart"
@@ -107,7 +107,7 @@ function updateCanvas() {
   canvasObj.height = canvasObj.canvas.offsetHeight;
 }
 onMounted(() => {
-  canvasObj.canvas = document.getElementById("day22canvas");
+  canvasObj.canvas = document.getElementById("canvas");
   ctx = canvasObj.canvas.getContext("2d");
   updateCanvas();
   window.addEventListener("resize", updateCanvas);

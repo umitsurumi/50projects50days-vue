@@ -1,5 +1,5 @@
 <template>
-  <div class="p-4 w-full bg-cyan-300">
+  <div class="p-4 w-full h-screen bg-cyan-300">
     <div class="relative h-10">
       <button
         class="absolute top-1/2 right-4 -translate-y-1/2 flex p-2 text-white bg-lime-500"

@@ -1,10 +1,10 @@
 <template>
-  <div class="m-auto w-80 my-10">
+  <div class="m-auto w-80 my-20">
     <h3 class="flex justify-center font-serif font-bold">
       Double click on the image to<Heart class="text-red-500 fill-red-500" /> it
     </h3>
     <p class="mb-4 text-center text-sm font-mono font-semibold">
-      You liked it {{ day29counter }} times
+      You liked it {{ counter }} times
     </p>
     <div
       class="relative w-full shadow-xl border-8 cursor-pointer dark:shadow-white"
@@ -23,7 +23,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { Heart } from "@/components/icons/SvgIcons";
-const day29counter = ref(0);
+const counter = ref(0);
 const img = ref<null | HTMLElement>(null);
 const heart_x = ref(0);
 const heart_y = ref(0);
@@ -37,7 +37,7 @@ function likedAnimation(e: MouseEvent) {
     setTimeout(() => {
       showHeart.value = false;
     });
-    day29counter.value++;
+    counter.value++;
   }
 }
 </script>

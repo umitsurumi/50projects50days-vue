@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full h-96 my-10">
+  <div class="w-full my-20">
     <div class="flex m-auto w-96 h-96 overflow-hidden shadow">
       <img
         class="w-full h-full object-cover transition-all duration-500"

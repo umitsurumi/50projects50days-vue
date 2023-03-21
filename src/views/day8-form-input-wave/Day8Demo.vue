@@ -5,17 +5,17 @@
       <!-- formStatus是当前活动窗口，或formInfo中已有输入内容，输入框保持active状态 -->
       <div
         class="relative mb-8"
-        :class="{ day8active: formStatus === `${key}` || formInfo[key] !== '' }"
+        :class="{ active: formStatus === `${key}` || formInfo[key] !== '' }"
         v-for="key in Object.keys(formInfo)">
         <input
           :type="`${key}`"
-          :id="`day8${key}`"
+          :id="key"
           required
           class="py-4 w-full border-b-2 border-white bg-transparent outline-none"
           v-model="formInfo[key]"
           @focus="formStatus = `${key}`"
           @blur="formStatus = ''" />
-        <label :for="`day8${key}`" class="absolute top-4 left-0">
+        <label :for="key" class="absolute top-4 left-0">
           <!-- 为每一个字符等差设置过渡延迟实现波浪效果 -->
           <span
             class="transition-all inline-block"
@@ -55,7 +55,7 @@ const formInfo: FormInfo = reactive({
 
 <style lang="scss" scoped>
 // active的样式
-.day8active {
+.active {
   input {
     @apply border-blue-400;
   }

@@ -39,18 +39,20 @@
         </h5>
       </div>
       <div
-        class="absolute bg-white bottom-0 translate-y-full group-hover/movie:translate-y-0 transition duration-300 dark:bg-slate-800">
+        class="absolute bg-white w-full bottom-0 translate-y-full group-hover/movie:translate-y-0 transition duration-300 dark:bg-slate-800">
         <h5 class="m-4 text-center text-lg font-bold">
           {{ language === "en-US" ? "Overview" : "简介" }}
         </h5>
-        <p class="m-4 px-4 text-center">{{ movie.overview }}</p>
+        <p class="m-4 px-4 text-center">
+          {{ movie.overview }}
+        </p>
       </div>
     </div>
   </div>
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from "vue";
+import { onMounted, ref, watch } from "vue";
 import { Search } from "@/components/icons/SvgIcons";
 interface MovieDate {
   id: string;
@@ -81,6 +83,10 @@ function getSearch() {
     window.location.reload;
   }
 }
+watch(
+  () => language.value,
+  () => getMovies(API_URL + `&language=${language.value}`)
+);
 onMounted(() => getMovies(API_URL));
 </script>
 

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-full p-4">
+  <div class="w-full p-10">
     <h3 class="text-center text-3xl font-semibold">
       Frequently Asked Questions
     </h3>
@@ -10,7 +10,7 @@
           faq.isShowAnswer,
       }"
       v-for="faq in faqList"
-      :key="`day12${faq.question}`">
+      :key="faq.question">
       <div class="relative z-10">
         <h4 class="pr-6 text-lg">{{ faq.question }}</h4>
         <p class="mt-6 text-sm" v-show="faq.isShowAnswer">

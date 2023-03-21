@@ -1,5 +1,5 @@
 <template>
-  <div class="relative w-full h-screen">
+  <div class="relative w-full h-[90vh]">
     <div
       class="absolute inset-0 m-auto w-2/3 h-24 border-current rounded"
       :class="{ border: eventKeyCode.code === '' }">
@@ -16,7 +16,7 @@
         <li
           class="w-1/4 h-5/6"
           v-for="key in Object.keys(eventKeyCode)"
-          :key="`day11${key}`">
+          :key="key">
           <h4 class="-mt-2 mb-2 h-1/5 text-center">event.{{ key }}</h4>
           <p
             class="flex justify-center items-center w-full h-full border border-current shadow-lg rounded dark:shadow-slate-400">

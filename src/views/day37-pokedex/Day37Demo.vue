@@ -1,5 +1,5 @@
 <template>
-  <div class="flex justify-center flex-wrap">
+  <div class="flex justify-center flex-wrap my-10">
     <div
       class="m-2 p-5 rounded-lg shadow-xl"
       :style="{ background: pokemon.color }"
